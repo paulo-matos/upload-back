@@ -7,6 +7,7 @@ Para rodar o projeto back:
 
 Instruções
 > - Após clonar o repositório, via terminal (de dentro da pasta) rode o comando "npm i" para instalar todas as dependências necessárias;
+> - Rodar o comando: npx prisma init --datasource-provider SQLite
 > - Para iniciar o projeto digite o comando "npm run dev"
 > - Após compilação, será possível acessar o projeto em http://localhost:3333/ via Frontend ou via Postman
 
