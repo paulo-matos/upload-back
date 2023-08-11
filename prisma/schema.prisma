@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Uploads {
+  Id               String   @id @default(uuid())
+  File_Name        String
+  File_Stored_Name String
+  Path             String
+  Created_At       DateTime @default(now())
+}
+
+// SQLite não possui tipos de mapeamentos nativos, o que seria 'varchar' com limitação de tamanho é simplesmente convertido para TEXT
+// https://github.com/prisma/docs/issues/2803
+// Caso fosse postgres, a atribuição seria db.VarChar(250)

@@ -1,0 +1,7 @@
+-- CreateTable
+CREATE TABLE "Uploads" (
+    "Id" TEXT NOT NULL PRIMARY KEY,
+    "File_Name" TEXT NOT NULL,
+    "Path" TEXT NOT NULL,
+    "Created_At" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
